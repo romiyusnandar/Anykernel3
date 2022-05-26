@@ -37,6 +37,19 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel boot install
 dump_boot;
 # begin ramdisk changes
+# Clean up other kernels' ramdisk overlay.d files
+rm -rf $ramdisk/overlay.d
+# Add our ramdisk files if Magisk is installed
+if [ -d $ramdisk/.backup ]; then
+	ui_print " "; ui_print "Installing Spectrum..."
+	mv /tmp/anykernel/overlay.d $ramdisk/overlay.d
+	cp -f /system_root/init.rc $ramdisk/overlay.d
+	sleep 2
+		insert_line $ramdisk/overlay.d/init.rc "init.spectrum.rc" after 'import /init.usb.rc' "import /init.spectrum.rc"
+		ui_print "Spectrum installed succesfully"
+    set_perm_recursive 0 0 750 750 $ramdisk/*
+fi;
+
 
 write_boot;
 ## end boot install
