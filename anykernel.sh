@@ -5,7 +5,7 @@
 # begin properties
 properties() { '
 kernel.string= 
-maintainer.string=Cakeby Kernel by Kakashi
+maintainer.string= Kernel by Kakashi
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -40,5 +40,3 @@ dump_boot;
 
 write_boot;
 ## end boot install
-
-ui_print "Cakeby Kernel OC Installed Succesfully";
