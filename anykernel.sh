@@ -41,4 +41,4 @@ dump_boot;
 write_boot;
 ## end boot install
 
-echo "kernel installed successfully"
+ui_print "kernel installed successfully"
