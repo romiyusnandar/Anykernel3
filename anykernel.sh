@@ -4,22 +4,20 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string= 
-maintainer.string= Kernel by Kakashi
+kernel.string=Cakeby Kernel  by romiyusnandar @telegram
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=tissot
-supported.versions=9 - 13.1
+device.name1=lavender
+supported.versions=9 - 11
 supported.patchlevels=
 '; } # end properties
 
-
 # shell variables
-block=/dev/block/platform/soc/7824900.sdhci/by-name/boot;
-is_slot_device=1;
+block=/dev/block/bootdevice/by-name/boot;
+is_slot_device=0;
 ramdisk_compression=auto;
 
 
@@ -30,15 +28,21 @@ ramdisk_compression=auto;
 
 ## AnyKernel file attributes
 # set permissions/ownership for included ramdisk files
-set_perm_recursive 0 0 755 644 $ramdisk/*;
-set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
 
-## AnyKernel boot install
+## AnyKernel install
 dump_boot;
+
 # begin ramdisk changes
 
-write_boot;
-## end boot install
+# init.rc
 
-ui_print "kernel installed successfully"
+# init.tuna.rc
+
+# fstab.tuna
+
+# end ramdisk changes
+
+write_boot;
+## end install
+
