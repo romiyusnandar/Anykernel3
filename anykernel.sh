@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Quantum Charge by yusna21
+kernel.string=Quantum Charge
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -50,3 +50,6 @@ fi;
 
 flash_boot;
 ## end install
+
+sleep 3
+ui_print "kernel installed successfully"
