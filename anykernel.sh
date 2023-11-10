@@ -12,10 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=topaz
 device.name2=tapas
-device.name3=
-device.name4=
-device.name5=
-supported.versions=
+supported.versions=13 - 14.1
 '; } # end properties
 
 # shell variables
@@ -52,4 +49,5 @@ flash_boot;
 ## end install
 
 sleep 3
+ui_print ""
 ui_print "kernel installed successfully"
