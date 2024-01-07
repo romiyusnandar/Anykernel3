@@ -12,7 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=
 device.name2=
-device.name3=xun
+device.name3=
 supported.versions=13 - 14.1
 '; } # end properties
 
