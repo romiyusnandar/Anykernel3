@@ -5,14 +5,14 @@
 # begin properties
 properties() { '
 kernel.string= 
-maintainer.string= Kernel by sirNewbies
+maintainer.string=
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=tissot
-supported.versions=9 - 14.1
+supported.versions=14
 supported.patchlevels=
 '; } # end properties
 
