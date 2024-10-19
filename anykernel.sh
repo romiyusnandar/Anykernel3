@@ -12,7 +12,7 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=tissot
-supported.versions=14
+supported.versions=9 - 15
 supported.patchlevels=
 '; } # end properties
 
